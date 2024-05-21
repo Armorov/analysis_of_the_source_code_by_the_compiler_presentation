@@ -1,0 +1,12 @@
+fl.l:
+	flex fl.l
+	cc lex.yy.c -lfl
+	./a.out
+
+
+
+fl_v2.l:
+	bison -d fb.y
+	flex fl_v2.l
+	cc fb.tab.c lex.yy.c -lfl
+	./a.out
